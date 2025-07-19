@@ -9,7 +9,7 @@ on:
 permissions:
   contents: write  
 
-jobs: Teacher
+jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
@@ -34,15 +34,15 @@ jobs: Teacher
       # Configure Git identity
       - name: Configure Git
         run: |
-          git config --global user.name "balajee-rm"
-          git config --global user.email "balajee.rm@gmail.com"
+          git config --global user.name "thanuja90905"
+          git config --global user.email"thanuja90905@gmail.com"
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "balajee-rm"
-          git config --global user.email "balajee.rm@gmail.com"
+          git config --global user.name "thanuja90905"
+          git config --global user.email "thanuja90905@gmail.com"
           npm install -g gh-pages
-          gh-pages -d dist -r https://x-access-token:${GITHUB_TOKEN}@github.com/balajee-rm/S109.git
+          gh-pages -d dist -r https://github.com/Thanuja90905/ex-1.git
